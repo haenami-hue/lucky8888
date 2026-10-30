@@ -1,0 +1,47 @@
+<!doctype html>
+<!--
+  카톡·문자 링크 미리보기 이미지(public/og-image.png, 1200×630) 원본.
+  다시 만들 때 (PowerShell):
+    & "C:\Program Files\Google\Chrome\Application\chrome.exe" --headless=new --hide-scrollbars `
+      --window-size=1200,630 --virtual-time-budget=4000 --screenshot=public\og-image.png scripts\og-image.html
+-->
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=block" rel="stylesheet" />
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background: linear-gradient(135deg, #7b5cff 0%, #c85cff 50%, #ff5cc8 100%);
+    font-family: "Pretendard", "Malgun Gothic", "Noto Sans KR", sans-serif;
+    color: #fff; display: grid; align-content: center; padding: 0 90px; box-sizing: border-box; position: relative;
+  }
+  body::after {
+    content: ""; position: absolute; right: -120px; top: -160px; width: 560px; height: 560px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,.4), transparent 65%);
+  }
+  h1 { font-family: "Black Han Sans", sans-serif; font-size: 112px; margin: 0; font-weight: 400; letter-spacing: 2px; }
+  p { font-size: 40px; font-weight: 700; margin: 12px 0 44px; opacity: .95; }
+  .balls { display: flex; gap: 22px; }
+  .ball {
+    width: 104px; height: 104px; border-radius: 50%; display: grid; place-items: center;
+    font-size: 46px; font-weight: 800; text-shadow: 0 2px 4px rgba(0,0,0,.35);
+    background: radial-gradient(circle at 32% 28%, rgba(255,255,255,.85) 0 8%, rgba(255,255,255,0) 32%),
+      radial-gradient(circle at 50% 120%, rgba(0,0,0,.22), transparent 60%), var(--c);
+    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+  }
+</style>
+</head>
+<body>
+  <h1>행운로또 🍀</h1>
+  <p>사주와 통계로 뽑는 이번 주 로또 번호</p>
+  <div class="balls">
+    <span class="ball" style="--c:#fbc400">7</span>
+    <span class="ball" style="--c:#69c8f2">13</span>
+    <span class="ball" style="--c:#ff7272">24</span>
+    <span class="ball" style="--c:#ff7272">27</span>
+    <span class="ball" style="--c:#aaaaaa">33</span>
+    <span class="ball" style="--c:#b0d840">41</span>
+  </div>
+</body>
+</html>

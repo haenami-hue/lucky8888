@@ -1,0 +1,94 @@
+/* 디자인 토큰. 컴포넌트는 여기 정의된 변수만 사용한다. */
+:root {
+  color-scheme: light;
+  --bg: #efe6ff;
+  --blob-1: #c7a2ff;
+  --blob-2: #e9b3ff;
+  --blob-3: #9f86ff;
+  --blob-4: #ffb3e1;
+
+  --card: rgba(255, 255, 255, 0.78);
+  --card-solid: #ffffff;
+  --card-border: rgba(255, 255, 255, 0.95);
+  --card-shadow: 0 10px 30px rgba(110, 60, 200, 0.16), 0 2px 6px rgba(110, 60, 200, 0.07);
+
+  --text-1: #2a1638;
+  --text-2: #5e4a6b;
+  --text-3: #6f5c7c; /* 카드 위 대비 4.5:1 이상 */
+  --on-accent: #ffffff;
+
+  --accent: #ff4d8d;
+  --accent-2: #ff8a3d;
+  --accent-3: #7b5cff;
+  --accent-soft: rgba(255, 77, 141, 0.12);
+  --grad-hero: linear-gradient(135deg, #ff4d8d 0%, #ff7a59 48%, #ffb02e 100%);
+  --grad-violet: linear-gradient(135deg, #7b5cff 0%, #c85cff 55%, #ff5cc8 100%);
+  --grad-mint: linear-gradient(135deg, #22c1c3 0%, #7be495 100%);
+  --grad-text: linear-gradient(90deg, #ff4d8d, #ff8a3d 50%, #7b5cff);
+
+  /* 차트 */
+  --chart-surface: #ffffff;
+  --grid: #f3e3ea;
+  --axis: #dcc6d1;
+  --series-violet: #7b5cff;
+  --series-pink: #ff4d8d;
+
+  /* 동행복권 공식 공 색상 */
+  --ball-yellow: #fbc400;
+  --ball-blue: #69c8f2;
+  --ball-red: #ff7272;
+  --ball-gray: #aaaaaa;
+  --ball-green: #b0d840;
+
+  --radius-l: 24px;
+  --radius-m: 16px;
+  --radius-s: 10px;
+  --nav-h: 64px;
+  --font: "Pretendard", system-ui, -apple-system, "Segoe UI", "Noto Sans KR", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --bg: #1a0f3a;
+    --blob-1: #b23cff;
+    --blob-2: #7a3dff;
+    --blob-3: #6a3dff;
+    --blob-4: #ff3ea5;
+    --card: rgba(38, 25, 72, 0.72);
+    --card-solid: #241848;
+    --card-border: rgba(255, 255, 255, 0.10);
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    --text-1: #fbf1ff;
+    --text-2: #d9c8e8;
+    --text-3: #a592b8;
+    --accent-soft: rgba(255, 77, 141, 0.22);
+    --chart-surface: #241848;
+    --grid: #3a2b5e;
+    --axis: #4d3c74;
+    --series-violet: #9d85ff;
+    --series-pink: #ff6fa3;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #1a0f3a;
+  --blob-1: #b23cff;
+  --blob-2: #7a3dff;
+  --blob-3: #6a3dff;
+  --blob-4: #ff3ea5;
+  --card: rgba(38, 25, 72, 0.72);
+  --card-solid: #241848;
+  --card-border: rgba(255, 255, 255, 0.10);
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --text-1: #fbf1ff;
+  --text-2: #d9c8e8;
+  --text-3: #a592b8;
+  --accent-soft: rgba(255, 77, 141, 0.22);
+  --chart-surface: #241848;
+  --grid: #3a2b5e;
+  --axis: #4d3c74;
+  --series-violet: #9d85ff;
+  --series-pink: #ff6fa3;
+}
